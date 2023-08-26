@@ -1,0 +1,24 @@
+RewriteEngine On
+RewriteBase /Book_Review/Book_Review_Code_PHP/
+
+# Sửa đường link 
+
+RewriteRule ^signin$ views/signIn.php [L]
+RewriteRule ^forgetpassword$ views/forgetPassword.php [L]
+RewriteRule ^signout$ Controllers/SignOut_Controller.php [L]
+RewriteRule ^home$ index.php [L]
+RewriteRule ^bookDetail$ views/bookDetail.php [L]
+RewriteRule ^reviewBook$ views/reviewBook.php [L]
+
+# admin site
+RewriteRule ^admin$ views/admin_site/index.php [L]
+
+RewriteRule ^admin/signout$ Controllers/admin_site/SignOut_Controller.php [L]
+
+RewriteRule ^admin/book$ views/admin_site/book/view.php [L]
+
+RewriteRule ^admin/customer$ views/admin_site/customer/view.php [L]
+
+RewriteRule ^admin/category$ views/admin_site/category/view.php [L]
+RewriteRule ^admin/editCategory$ views/admin_site/category/index.php [L]
+RewriteRule ^admin/deleteCategory$ Controllers/admin_site/deleteCategory_Controller.php [L]
